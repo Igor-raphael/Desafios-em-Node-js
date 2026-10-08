@@ -1,9 +1,15 @@
 const fs = require("fs");
 
-const dados = fs.readFileSync("dados.json", "utf8");
+//Local variável dos dados.
+const localData = "dados.json";
 
+//Leitor do JSON
+const dados = fs.readFileSync(localData, "utf8");
+
+//Passando os dados que estão em String para objeto.
 const json = JSON.parse(dados);
 
+//Devolutiva no terminal das informações classificadas.
 json.vendas.forEach(venda => {
     
     if(venda.valor < 100){
@@ -12,14 +18,14 @@ json.vendas.forEach(venda => {
 
     if(venda.valor >= 100 && venda.valor < 500 ){
 
-      const com = venda.valor - (venda.valor - (venda.valor * 0.01));
+      const com = venda.valor * 0.01;
 
         console.log(venda.vendedor + " : R$" + venda.valor + " =" + " -- Comissão de \x1b[32mR$ " + com.toFixed(2) + "\x1b[0m" );
     }
 
-    if(venda.valor > 500 ){
+    if(venda.valor >= 500 ){
 
-      const com = venda.valor - (venda.valor - (venda.valor * 0.05));
+      const com = venda.valor * 0.05;
 
         console.log(venda.vendedor + " : R$" + venda.valor + " =" + " -- Comissão de \x1b[32mR$ " + com.toFixed(2) + "\x1b[0m" );
     }
