@@ -1,0 +1,18 @@
+{
+  "movimentacoes": [
+    {
+      "id": 1,
+      "tipo": "Remover",
+      "descricao": "Caneta Azul",
+      "codigo": 101,
+      "estoque": 130
+    },
+    {
+      "id": 2,
+      "tipo": "Adicionar",
+      "descricao": "Caneta Azul",
+      "codigo": 101,
+      "estoque": 150
+    }
+  ]
+}
