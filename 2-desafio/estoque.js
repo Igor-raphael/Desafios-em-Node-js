@@ -22,7 +22,7 @@ function buscaTodos(){
 //Função para buscar produtos especifico por código ou nome
 function buscarProduto(identificador){
 
-     json.estoque.find( p => p.codigoProduto === identificador || 
+    return json.estoque.find( p => p.codigoProduto === identificador || 
         p.descricaoProduto.toLowerCase() === identificador.toString().toLowerCase()
     );
 
@@ -106,3 +106,6 @@ function registrarMovimentação(tipo, descricao, codigo, estoque){
     log.movimentacoes.push(movimentacao);
     fs.writeFileSync(localLog, JSON.stringify(log, null, 2), "utf8");
 }
+
+
+module.exports = {buscaTodos, buscarProduto, adicionarEstoque, removerEstoque};

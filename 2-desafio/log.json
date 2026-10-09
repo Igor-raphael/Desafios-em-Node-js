@@ -13,6 +13,20 @@
       "descricao": "Caneta Azul",
       "codigo": 101,
       "estoque": 150
+    },
+    {
+      "id": 3,
+      "tipo": "Adicionar",
+      "descricao": "Caneta Azul",
+      "codigo": 101,
+      "estoque": 155
+    },
+    {
+      "id": 4,
+      "tipo": "Remover",
+      "descricao": "Caneta Azul",
+      "codigo": 101,
+      "estoque": 150
     }
   ]
 }
